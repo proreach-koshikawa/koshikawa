@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #f5f5f5;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #064f94;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 16px;
+    margin: 70px auto 70px auto;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    position: relative;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #064f94;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #064f94;
+}
+
+#relationship, #gender {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#relationship input[type="radio"], #gender input[type="radio"] {
+    margin-top: 5px;
+}
+
+select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #064f94;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Styles for tablets */
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Styles for mobile phones */
+    header {
+        padding: 15px 0;
+        font-size: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    footer {
+        padding: 5px 0;
+        font-size: 14px;
+    }
+}
+
+

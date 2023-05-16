@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <header>
+        <h1>塾ラボ</h1>
+    </header>
+
+    <div class="container">
+        <form id="myForm">
+
+            <h2>資料請求フォーム</h2>
+
+            <label for="relationship">生徒との続柄</label>
+            <div id="relationship">
+                <input type="radio" id="self" name="relationship" value="本人" required>
+                <label for="self">本人</label>
+                <input type="radio" id="mother" name="relationship" value="母">
+                <label for="mother">母</label>
+                <input type="radio" id="father" name="relationship" value="父">
+                <label for="father">父</label>
+                <input type="radio" id="grandparents" name="relationship" value="祖父母">
+                <label for="grandparents">祖父母</label>
+                <input type="radio" id="others" name="relationship" value="その他">
+                <label for="others">その他</label>
+            </div>
+                  
+
+            <label for="student_name_kanji">生徒氏名(漢字)</label>
+            <input type="text" id="student_name_kanji" name="student_name_kanji" required>
+
+            <label for="student_name_kana">生徒氏名(かな)</label>
+            <input type="text" id="student_name_kana" name="student_name_kana" required>
+
+            <label for="gender">生徒の性別</label>
+            <div id="gender">
+                <input type="radio" id="male" name="gender" value="男" required>
+                <label for="male">男</label>
+                <input type="radio" id="female" name="gender" value="女">
+                <label for="female">女</label>
+                <input type="radio" id="other" name="gender" value="その他">
+                <label for="other">その他</label>
+            </div>
+
+            <label for="grade">学年</label>
+                <select id="grade" name="grade" required>
+                    <option value="">学年をお選びください</option>
+                    <option value="幼児">幼児</option>
+                    <option value="小学1年">小学1年</option>
+                    <option value="小学2年">小学2年</option>
+                    <option value="小学3年">小学3年</option>
+                    <option value="小学4年">小学4年</option>
+                    <option value="小学5年">小学5年</option>
+                    <option value="小学6年">小学6年</option>
+                    <option value="中学1年">中学1年</option>
+                    <option value="中学2年">中学2年</option>
+                    <option value="中学3年">中学3年</option>
+                    <option value="高校1年">高校1年</option>
+                    <option value="高校2年">高校2年</option>
+                    <option value="高校3年">高校3年</option>
+                    <option value="浪人">浪人</option>
+                </select>
+
+
+            <label for="postal_code">郵便番号</label>
+            <input type="text" id="postal_code" name="postal_code" required>
+
+            <label for="prefecture">都道府県</label>
+            <input type="text" id="prefecture" name="prefecture" required>
+
+            <label for="city">市区町村</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="town">町名・番地 / ビル・マンション名・部屋番号等</label>
+            <input type="text" id="town" name="town" required>
+
+            <label for="phone">電話番号</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required>
+
+            <input type="submit" value="送信する" onclick="location.href='kiyaku.html';">
+        </form>
+
+    </div>
+
+    <footer>
+        <p>© 2023 Proreach</p>
+    </footer>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+      
+          var url = 'https://script.google.com/macros/s/AKfycbytjr21RpPbeERgFvdP950iJ7Ot-MqFyurRVGUUwPT-V_P_OWyJtrCFpH0HbuweRoKdjQ/exec'; // コピーしたURLをここに貼り付けます
+      
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', url);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.onload = function() {
+            console.log(xhr.responseText);
+          };
+          xhr.send(new URLSearchParams(new FormData(e.target)).toString());
+        });
+      </script>
+      
+</body>
+</html>
