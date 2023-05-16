@@ -2,9 +2,9 @@
 
 ## prefectures
 
-- 北海道田畑
-- id 田畑
-- name 田畑
+- 北海道
+- id 
+- name 
 - slug 田畑
 
 ## areas
