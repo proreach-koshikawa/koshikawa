@@ -1,6 +1,6 @@
 # DB構造
 ## prefectures
-- 都道府県
+- 北海道
 - id
 - name
 - slug
